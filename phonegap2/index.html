@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FreeJobs</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<meta name="viewport" content="widht=device-width, initial-scale=1"/>
+	<link href="video-js/video-js.css" rel="stylesheet">
+	<script type="text/javascript">
+  		document.createElement('video');
+  		document.createElement('audio');
+	</script>
+	<script src="video-js/video.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready", function(){
+			$("#element_list").css("display","none");
+		});
+		$(document).on("click", '[data-role="navbar"] a', function(){
+			$.mobile.changePage($(this).attr("data-href"), {
+				transition: "none",
+				changeHash: false,
+			});
+			return false;
+		});
+		$(document).on("click", '#videocv', function(){
+			$.mobile.changePage($(this).attr("data-href"), {
+				transition: "none",
+				changeHash: false,
+			});
+			return false;
+		});
+		$(document).on("click", '#atras', function(){
+			$.mobile.changePage($(this).attr("data-href"), {
+				transition: "none",
+				changeHash: false,
+			});
+			return false;
+		});
+		$(document).on("click", '#ir', function(){
+			$.mobile.changePage($(this).attr("data-href"), {
+				transition: "none",
+				changeHash: false,
+			});
+			$("#video_entrevista").attr("autoplay");
+			return false;
+		});
+		$(document).on("click", "#buscar", function(){
+			$("#element_list").css("display","initial");
+		});
+
+		$(document).on("click", "#buscar", function(){
+			$("#element_list").css("display","initial");
+		});
+			
+	</script>
+
+</head>
+<body>
+	<div id="login" data-role="page" style="background: url(img/background.png);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;">
+		<div data-role="header" style="text-align:center;">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="#perfil" data-href="#perfil" data-role="button" data-inline="true">Iniciar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+
+
+	</div>
+	<div id="uno" data-role="page">
+		<div data-role="header" style="text-align:center; background-color:white">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="hola%20mundo.html" data-href="#login" data-role="button" data-inline="true" style="font-size:small">Cerrar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-href="#perfil">Perfil</a></li>
+				<li><a href="#" data-href="#busqueda">Busqueda</a></li>
+				<li><a href="#" data-href="#mis">Ofertas</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="perfil" data-role="page">
+		<div data-role="header" style="text-align:center;">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="hola%20mundo.html" data-href="#login" data-role="button" data-inline="true" style="font-size:small">Cerrar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-href="#perfil">Perfil</a></li>
+				<li><a href="#" data-href="#busqueda">Busqueda</a></li>
+				<li><a href="#" data-href="#mis">Ofertas</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<img src="img/foto-perfil.jpg" alt="foto-perfil" style="max-width:50%;"/>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <p><strong>Nombre:</strong> Marcos</p>
+			        <p><strong>Apellido:</strong> Garcia</p>
+			    </div>
+			</fieldset>
+			<hr>
+			<p style="text-align:center;"><a data-role="button" href="#" data-href="#vcv">Hacer VideoCV</a></p>
+			<p style="text-align:center;"><a id="videocv" data-role="button" href="#" data-href="#vcv">VideoCV</a></p>
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Contacto</h3>
+			   <p><strong>Correo:</strong> mgarcia@freejobs.com</p>
+			   <p><strong>Direcci&oacute;n:</strong> Av. Valdemarín</p>
+			   <p><strong>Tel&eacute;fono:</strong> 653401763</p>
+			   <p><strong>P&aacute;gina Web:</strong> www.freejobs.com</p>
+			   <p><strong>Facebook:</strong> mgarcia</p>
+			</div>
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Estudios</h3>
+			   <p>
+			   		<p>Colegio </p>
+			   		<p>Universidad </p>
+			   </p>
+			</div>
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Experiencia Laboral</h3>
+			   <p>
+			   		<p>Practicas</p>
+			   		<p>Programador Junior</p>
+			   		<p>Programador Senir</p>
+			   </p>
+			</div>
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Aptitudes</h3>
+			   <p><a href="#" data-role="button" data-inline="true" style="font-size:small">Html5</a><a href="#" data-role="button" data-inline="true" style="font-size:small">CSS3</a><a href="#" data-role="button" data-inline="true" style="font-size:small">PHP</a><a href="#" data-role="button" data-inline="true" style="font-size:small">Python</a><a href="#" data-role="button" data-inline="true" style="font-size:small">OOP</a><a href="#" data-role="button" data-inline="true" style="font-size:small">Zend</a><a href="#" data-role="button" data-inline="true" style="font-size:small">Django</a></p>
+			</div>
+
+		</div>
+	</div>
+	<div id="busqueda" data-role="page">
+		<div data-role="header" style="text-align:center;">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="hola%20mundo.html" data-href="#login" data-role="button" data-inline="true" style="font-size:small">Cerrar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-href="#perfil">Perfil</a></li>
+				<li><a href="#" data-href="#busqueda">Busqueda</a></li>
+				<li><a href="#" data-href="#mis">Ofertas</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<input type="text" class="tag" name="tag" />
+				</div>
+				<div class="ui-block-b">
+					<a href="#" 
+								data-role="button"
+					            data-icon="search"
+					            data-theme="a"
+					            data-inline="true" 
+					            id="buscar"
+					            class="search-button">Buscar</a>
+				</div>
+			</fieldset>
+			<hr>
+			<ul data-role="listview" id="element_list">
+				<li>Empresa 1</li>
+				<li>Empresa 2</li>
+				<li>Empresa 3</li>
+				<li>Empresa 4</li>
+				<li>Empresa 5</li>
+				<li>Empresa 6</li>
+				<li>Empresa 7</li>
+			</ul>
+		</div>
+	</div>
+	<div id="mis" data-role="page">
+		<div data-role="header" style="text-align:center;">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="hola%20mundo.html" data-href="#login" data-role="button" data-inline="true" style="font-size:small">Cerrar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-href="#perfil">Perfil</a></li>
+				<li><a href="#" data-href="#busqueda">Busqueda</a></li>
+				<li><a href="#" data-href="#mis">Ofertas</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Oferta 1</h3>
+			   <p><strong>Empresa:</strong> Empresa 1</p>
+			   <p><strong>Postulaci&oacute;n:</strong> Programador Senior en SAP-ABAP</p>
+			   <p  style="text-align:right"><a id="ir" data-role="link" data-inline="true" href="#" data-href="#entrevista">Ir a la entrevista</a></p>
+			</div>
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Oferta 2</h3>
+			   <p>
+			   		<p>Colegio </p>
+			   		<p>Universidad </p>
+			   </p>
+			</div>
+			<hr>
+			<div data-role="collapsible">
+			   <h3>Oferta 3</h3>
+			   <p>
+			   		<p>Practicas</p>
+			   		<p>Programador Junior</p>
+			   		<p>Programador Senir</p>
+			   </p>
+			</div>
+		</div>
+	</div>
+	<div id="vcv" data-role="page">
+		<div data-role="header" style="text-align:center;">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="hola%20mundo.html" data-href="#login" data-role="button" data-inline="true" style="font-size:small">Cerrar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-href="#perfil">Perfil</a></li>
+				<li><a href="#" data-href="#busqueda">Busqueda</a></li>
+				<li><a href="#" data-href="#mis">Mis Trabajos</a></li>
+			</ul>
+		</div>
+		<div data-role="content" >
+			<p style="text-align:left;"><a id="atras" data-role="link" data-inline="true" href="#" data-href="#perfil">&lt;&lt;Atras</a></p>
+			<iframe width="100%" height="auto" src="//www.youtube-nocookie.com/embed/z5nbqwynsyI" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div id="entrevista" data-role="page">
+		<div data-role="header" style="text-align:center;">
+			<fieldset class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<p>FreeJobs</p>
+			    </div>			    
+			    <div class="ui-block-b">
+			        <a href="hola%20mundo.html" data-href="#login" data-role="button" data-inline="true" style="font-size:small">Cerrar Sesi&oacute;n</a>
+			    </div>
+			</fieldset>
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-href="#perfil">Perfil</a></li>
+				<li><a href="#" data-href="#busqueda">Busqueda</a></li>
+				<li><a href="#" data-href="#mis">Mis Trabajos</a></li>
+			</ul>
+		</div>
+		<div data-role="content" >
+			<p style="text-align:left;"><a id="atras" data-role="link" data-inline="true" href="#" data-href="#perfil">&lt;&lt;Atras</a></p>
+			<video id="video_entrevista" class="video-js vjs-default-skin"
+				  controls preload="auto" width="340" height="264"
+				  data-setup='{"example_option":true}'>
+				 <source src="video/entrevista.mp4" type='video/mp4' />
+			</video>
+		</div>
+	</div>
+	
+</body>
+</html>
